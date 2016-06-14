@@ -76,7 +76,7 @@ controller.hears('.*', ['direct_message', 'direct_mention'], function (bot, mess
 })
 
 
-controller.hears(['roman'], ['in_channel'], function (bot, message) {
+controller.hears(['roman'], ['direct_message', 'direct_mention','in_channel'], function (bot, message) {
     bot.reply(message, 'You really do care about me. :heart:')
 });
 
