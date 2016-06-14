@@ -30,19 +30,6 @@ controller.on('bot_channel_join', function (bot, message) {
     bot.reply(message, "I'm here!")
 })
 
-controller.hears(['hello', 'hi'], ['direct_mention'], function (bot, message) {
-    bot.reply(message, 'Hello.')
-})
-
-controller.hears(['hello', 'hi'], ['direct_message'], function (bot, message) {
-    bot.reply(message, 'Hello.')
-    bot.reply(message, 'It\'s nice to talk to you directly.')
-})
-
-controller.hears('.*', ['mention'], function (bot, message) {
-    bot.reply(message, 'You really do care about me. :heart:')
-})
-
 controller.hears('help', ['direct_message', 'direct_mention'], function (bot, message) {
     var help = 'I will respond to the following messages: \n' +
         '`bot hi` for a simple message.\n' +
@@ -76,7 +63,7 @@ controller.hears(['roman'], ['direct_message', 'direct_mention', 'ambient'], fun
 })
 
 controller.hears(['ritz'], ['direct_message', 'direct_mention', 'ambient'], function (bot, message) {
-    bot.reply(message, 'Ja Ritz mag lange long johns :lips:!')
+    bot.reply(message, 'Ja Ritz mag lange long johns :lips:')
 })
 
 /* Last */
