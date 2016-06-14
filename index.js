@@ -66,6 +66,10 @@ controller.hears(['ritz'], ['direct_message', 'direct_mention', 'ambient'], func
     bot.reply(message, 'Ja Ritz mag lange long johns :lips:')
 })
 
+controller.hears(['shakeit'], ['direct_message', 'direct_mention', 'ambient'], function (bot, message) {
+    bot.reply(message, 'Niemand spricht über mich, sonst gibts instant roundhouse kick des Todes :muscle:')
+})
+
 /* Last */
 controller.hears('.*', ['direct_message', 'direct_mention'], function (bot, message) {
     bot.reply(message, '<@' + message.user + '> du Depp - dafür gibts noch keinen Befehl. \n')
