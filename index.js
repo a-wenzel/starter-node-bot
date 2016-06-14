@@ -74,3 +74,11 @@ controller.hears(['attachment'], ['direct_message', 'direct_mention'], function 
 controller.hears('.*', ['direct_message', 'direct_mention'], function (bot, message) {
   bot.reply(message, 'Sorry <@' + message.user + '>, I don\'t understand. \n')
 })
+
+
+controller.hears(["keyword","^pattern$"],["direct_message","direct_mention","mention","ambient"],function(bot,message) {
+  // do something to respond to message
+  // all of the fields available in a normal Slack message object are available
+  // https://api.slack.com/events/message
+  bot.reply(message,'You used a keyword!');
+});
