@@ -72,7 +72,7 @@ controller.hears(['attachment'], ['direct_message', 'direct_mention'], function 
 })
 
 controller.hears(['roman'], ['direct_message', 'direct_mention','in_channel'], function (bot, message) {
-    bot.reply(message, 'You really do care about me. :heart:')
+    bot.reply(message, 'Ja <@' + message.user + '> du hast recht, Roman ist wirklich ein Homo!')
 })
 
 controller.hears('.*', ['direct_message', 'direct_mention'], function (bot, message) {
