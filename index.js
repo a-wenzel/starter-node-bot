@@ -75,7 +75,7 @@ controller.hears(['roman'], ['direct_message', 'direct_mention','ambient'], func
     bot.reply(message, 'Ja <@' + message.user + '> du hast recht, Roman ist wirklich ein Homo!')
 })
 
-ontroller.hears(['uptime', 'identify yourself', 'who are you', 'what is your name'],
+controller.hears(['uptime', 'identify yourself', 'who are you', 'what is your name'],
     ['direct_message,direct_mention,mention'], function (bot, message) {
 
         var hostname = os.hostname();
