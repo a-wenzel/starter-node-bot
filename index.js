@@ -71,39 +71,13 @@ controller.hears(['attachment'], ['direct_message', 'direct_mention'], function 
     })
 })
 
-controller.hears(['roman'], ['direct_message', 'direct_mention','ambient'], function (bot, message) {
+controller.hears(['roman'], ['direct_message', 'direct_mention', 'ambient'], function (bot, message) {
     bot.reply(message, 'Ja <@' + message.user + '> du hast recht, Roman ist wirklich ein Homo!')
 })
 
-controller.hears(['uptime', 'identify yourself', 'who are you', 'what is your name'],
-    ['direct_message', 'direct_mention,mention', 'ambient'], function(bot, message) {
-
-        var hostname = os.hostname();
-        var uptime = formatUptime(process.uptime());
-
-        bot.reply(message,
-            ':robot_face: I am a bot named <@' + bot.identity.name +
-            '>. I have been running for ' + uptime + ' on ' + hostname + '.');
-
-    })
-
-function formatUptime(uptime) {
-    var unit = 'second';
-    if (uptime > 60) {
-        uptime = uptime / 60;
-        unit = 'minute';
-    }
-    if (uptime > 60) {
-        uptime = uptime / 60;
-        unit = 'hour';
-    }
-    if (uptime != 1) {
-        unit = unit + 's';
-    }
-
-    uptime = uptime + ' ' + unit;
-    return uptime;
-}
+controller.hears(['ritz'], ['direct_message', 'direct_mention', 'ambient'], function (bot, message) {
+    bot.reply(message, 'Ja Ritz mag lange long johns :lips:!')
+})
 
 /* Last */
 controller.hears('.*', ['direct_message', 'direct_mention'], function (bot, message) {
